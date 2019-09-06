@@ -9,7 +9,8 @@ public with sharing class StudyParticipantFilter implements SearchFilter{
     public List<String> getFields() {
         return new List<String>{
                 'Contact__r.Name',
-                'Clinical_Study__r.Title__c'
+                'Clinical_Study__r.Title__c',
+                'Status__c'
         };
     }
 

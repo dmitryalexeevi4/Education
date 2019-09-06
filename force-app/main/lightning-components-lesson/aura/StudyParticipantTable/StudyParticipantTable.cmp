@@ -28,6 +28,9 @@
                         <th>
                             <div class="slds-truncate">{!studyParticipant.Contact__r.Name}</div>
                         </th>
+                        <th>
+                            <div class="slds-truncate">{!studyParticipant.Status__c}</div>
+                        </th>
                     </tr>
                 </aura:iteration>
             </aura:if>
