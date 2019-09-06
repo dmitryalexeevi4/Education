@@ -2,6 +2,10 @@
  * Created by user on 06.09.2019.
  */
 
-.THIS.sp-panel {
-    min-height: 250px;
+.THIS .sp-panel {
+     min-height: 250px;
+ }
+
+.THIS .table-container {
+   position: relative;
 }
