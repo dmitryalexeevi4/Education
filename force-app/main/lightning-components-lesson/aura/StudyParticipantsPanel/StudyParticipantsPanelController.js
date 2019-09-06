@@ -6,6 +6,7 @@
   doInit: function(component, event, helper) {
     let action = component.get('c.getInitData');
     action.setCallback(this,function(response) {
+      debugger;
       if(response.getState() === 'SUCCESS') {
         let initData = response.getReturnValue();
         component.set('v.pagination', initData.pagination);
@@ -29,8 +30,8 @@
       debugger;
       if(response.getState() === 'SUCCESS') {
         let searchResponse = response.getReturnValue();
-        component.set('v.pagination', searchResponse.pagination);
-        component.set('v.pageRows', searchResponse.pageRows);
+        component.set('v.pagination', searchResponse.paginationData);
+        component.set('v.pageRows', searchResponse.pageRecords);
       }
     });
     $A.enqueueAction(action);
