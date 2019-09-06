@@ -24,7 +24,7 @@ public with sharing class StudyParticipantTriggerHandler {
         //var2
         //clinicalStudyMap = new Map<Id, Clinical_Study__c>(clinicalStudies);
 
-       /* for (Study_Participant__c sp : spList) {
+        /*for (Study_Participant__c sp : spList) {
             String studyName = clinicalStudyMap.get(sp.Clinical_Study__c).Name;
             sp.Study_Participant_Key__c = sp.Contact__c + ' ' + studyName;
         }*/

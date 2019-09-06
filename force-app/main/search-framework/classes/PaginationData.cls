@@ -25,8 +25,9 @@ public with sharing class PaginationData {
         Decimal allRecordsCountDecimal = allRecordsCount;
         Decimal pageRecordsCountDecimal = pageRecordsCount;
         Decimal allPagesDecimal = allRecordsCountDecimal/pageRecordsCountDecimal;
-        pagesCount = allPagesDecimal.intValue();
         allPagesDecimal = allPagesDecimal.round(System.RoundingMode.UP);
+        pagesCount = allPagesDecimal.intValue();
+
         if(currentPage > allPagesDecimal) currentPage = allRecordsCount == 0 ? 1 : pagesCount;
 
         offset = (currentPage - 1) * pageRecordsCount;

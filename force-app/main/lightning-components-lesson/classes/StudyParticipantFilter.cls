@@ -18,6 +18,10 @@ public with sharing class StudyParticipantFilter implements SearchFilter{
     }
 
     public String getFilterString() {
-        return ' WHERE Status__c = \'' + status + '\' AND Clinical_Study__r.Title__c LIKE \'%' + studyTitleTerm +'%\' ';
+        List<String> filters = new List<String>();
+        if(status != null) filters.add(' Status__c = \'' + status + '\'');
+        if(studyTitleTerm != null) filters.add(' Clinical_Study__r.Title__c LIKE \'%' + studyTitleTerm +'%\' ');
+        if(filters.size() > 0) return  ' WHERE ' + String.join(filters, ' AND ');
+        return '';
     }
 }
