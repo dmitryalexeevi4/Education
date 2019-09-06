@@ -3,5 +3,7 @@
  */
 
 public interface SearchFilter {
-
-}
+    List<String> getFields();
+    SObjectType getSObjectType();
+    String getFilterString();
+ }
