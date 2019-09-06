@@ -3,4 +3,34 @@
  -->
 
 <aura:component description="StudyParticipantFilter">
+    <!-- Attributes: -->
+    <aura:attribute name ="filter" type="StudyParticipantFilter"/>
+
+    <!-- Events: -->
+    <aura:registerEvent name="onchange" type="c:UIEvent"/>
+
+    <!-- Component Body: -->
+    <lightning:card title="Filter" class="filter-panel">
+        <div class="slds-grid study-participant-form">
+            <div class="slds-col">
+                <lightning:select name="select1" label="Participant status" required="true" value="{!v.filter.status}" onchange="{!c.processChanges}">
+                    <option value="">Choose one...</option>;
+                    <option value="Open">Open</option>;
+                    <option value="Closed">Closed</option>;
+                </lightning:select>
+            </div>
+            <div class="slds-col">
+                        <lightning:input
+                                aura:id="enter-search"
+                                name="enter-search"
+                                label="Clinical Study Title"
+                                type="search"
+                                value="{!v.filter.studyTitleTerm}"
+                                onchange="{!c.processChanges}"
+
+                        />
+            </div>
+        </div>
+    </lightning:card>
 </aura:component>
+

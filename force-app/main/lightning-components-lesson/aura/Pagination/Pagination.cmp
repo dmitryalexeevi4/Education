@@ -1,6 +1,23 @@
+
 <!--
  - Created by user on 05.09.2019.
  -->
 
 <aura:component description="Pagination">
+    <!-- Attributes: -->
+    <aura:attribute name="pagination" type="PaginationData"/>
+
+    <!-- Events: -->
+    <aura:registerEvent name="onchange" type="c:UIEvent" access="global"/>
+
+    <!-- Component body: -->
+    <lightning:card class="pagination-form">
+        <div class="slds-grid buttons-container">
+            <lightning:buttonGroup>
+                <lightning:buttonIcon iconName="utility:left" alternativeText="Left" />
+                <lightning:buttonIcon iconName="utility:right" alternativeText="Right" />
+            </lightning:buttonGroup>
+            <span class="page-numbers">{!v.pagination.currentPage + ' out of ' + v.pagination.pagesCount} </span>
+        </div>
+    </lightning:card>
 </aura:component>
