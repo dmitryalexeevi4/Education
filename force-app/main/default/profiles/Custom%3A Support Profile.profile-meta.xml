@@ -13,7 +13,19 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>GetRatesSimple</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PaginationData</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PlatformEventRaise</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PushTopicController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -69,6 +81,16 @@
         <editable>true</editable>
         <field>Clinical_Study__c.Title__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cloud_News__e.Amount__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cloud_News__e.OppId__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -195,6 +217,10 @@
     <layoutAssignments>
         <layout>Study_Participant__c-Study Participant Layout</layout>
     </layoutAssignments>
+    <pageAccesses>
+        <apexPage>PushTopicTest</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>Welcome</apexPage>
         <enabled>false</enabled>
